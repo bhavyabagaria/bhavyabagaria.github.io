@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavya Bagaria — Copywriter & Content Creator</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Neue+Montreal:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0E0E0E;
+  --paper:#FAF8F3;
+  --warm:#F0EBE0;
+  --sand:#E8E0D0;
+  --sage:#8BAF8E;
+  --terracotta:#C45C3A;
+  --dusty-rose:#D4918A;
+  --gold:#C8A96E;
+  --muted:#9A9285;
+  --light-ink:#2A2520;
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);font-family:'Space Grotesk',sans-serif;color:var(--ink);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 3rem;height:60px;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,243,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--sand)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;letter-spacing:0.01em}
+.nav-links{display:flex;gap:2.5rem;align-items:center}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--terracotta)!important;color:#fff!important;padding:8px 20px;border-radius:3px;letter-spacing:0.06em!important}
+.nav-cta:hover{background:#b54f30!important}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:8rem 3rem 4rem;gap:4rem;background:var(--paper);position:relative}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--sand)}
+.hero-left{}
+.hero-overline{display:flex;align-items:center;gap:10px;margin-bottom:2rem}
+.hero-overline span{font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--terracotta)}
+.hero-overline::before{content:'';width:32px;height:1px;background:var(--terracotta)}
+h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,5.5vw,5rem);font-weight:900;line-height:1.02;letter-spacing:-0.02em;color:var(--ink);margin-bottom:1.8rem}
+h1 i{font-style:italic;color:var(--terracotta)}
+.hero-desc{font-size:1rem;line-height:1.8;color:var(--muted);max-width:400px;margin-bottom:2.5rem;font-weight:400}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-size:13px;font-weight:600;padding:13px 28px;border-radius:3px;cursor:pointer;transition:all 0.2s;border:none;text-decoration:none;display:inline-block;letter-spacing:0.05em;text-transform:uppercase}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{background:var(--terracotta)}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--sand)}
+.btn-outline:hover{border-color:var(--ink)}
+.hero-right{position:relative}
+.hero-card-stack{position:relative;height:480px}
+.hc{position:absolute;border-radius:8px;overflow:hidden}
+.hc1{width:260px;height:300px;background:var(--terracotta);top:0;left:30px;display:flex;flex-direction:column;justify-content:flex-end;padding:1.8rem}
+.hc2{width:220px;height:240px;background:var(--warm);border:1.5px solid var(--sand);top:60px;right:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem}
+.hc3{width:200px;height:160px;background:var(--ink);bottom:0;left:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.4rem}
+.hc4{width:140px;height:100px;background:var(--sage);bottom:40px;right:30px;display:flex;align-items:center;justify-content:center;padding:1rem}
+.hc-label{font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.5rem;opacity:0.6}
+.hc-text{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;line-height:1.25;color:#fff}
+.hc2 .hc-label{color:var(--muted)}
+.hc2 .hc-text{color:var(--ink);font-size:0.95rem}
+.hc4 .hc-text{font-size:0.85rem;text-align:center;color:#fff}
+.hc-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:rgba(255,255,255,0.15);position:absolute;top:1rem;right:1.2rem}
+
+/* SECTION BASE */
+.section{padding:6rem 3rem}
+.section-alt{background:var(--warm)}
+.sec-header{margin-bottom:4rem}
+.sec-overline{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+.sec-overline span{font-size:10px;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--terracotta)}
+.sec-overline::before{content:'';width:24px;height:1px;background:var(--terracotta)}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em}
+.sec-title i{font-style:italic;color:var(--terracotta)}
+.sec-sub{margin-top:0.8rem;font-size:0.9rem;color:var(--muted);max-width:500px;line-height:1.7}
+
+/* COPY SAMPLES */
+.copy-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--sand);border:2px solid var(--sand);border-radius:8px;overflow:hidden}
+@media(max-width:680px){.copy-grid{grid-template-columns:1fr}}
+.cs{background:var(--paper);padding:2.5rem;transition:background 0.2s}
+.cs:hover{background:var(--warm)}
+.cs.full{grid-column:1/-1}
+.cs.dark{background:var(--ink);color:var(--paper)}
+.cs.dark:hover{background:var(--light-ink)}
+.cs.terracotta{background:var(--terracotta);color:#fff}
+.cs.terracotta:hover{background:#b54f30}
+.cs.sage{background:var(--sage);color:#fff}
+.cs.sage:hover{background:#7a9e7d}
+.cs-meta{display:flex;align-items:center;gap:8px;margin-bottom:1.2rem}
+.cs-type{font-size:9px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);padding:4px 10px;border:1px solid var(--sand);border-radius:2px}
+.cs.dark .cs-type{color:rgba(255,255,255,0.35);border-color:rgba(255,255,255,0.1)}
+.cs.terracotta .cs-type,.cs.sage .cs-type{color:rgba(255,255,255,0.55);border-color:rgba(255,255,255,0.2)}
+.cs-industry{font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)}
+.cs-headline{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;line-height:1.25;margin-bottom:1rem;letter-spacing:-0.01em}
+.cs.dark .cs-headline{color:var(--paper)}
+.cs-body{font-size:0.84rem;line-height:1.8;color:var(--muted)}
+.cs.dark .cs-body{color:rgba(255,255,255,0.55)}
+.cs.terracotta .cs-body,.cs.sage .cs-body{color:rgba(255,255,255,0.75)}
+.cs-cta{margin-top:1.5rem;display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--terracotta);text-decoration:none;border-bottom:1.5px solid var(--terracotta);padding-bottom:2px}
+.cs.dark .cs-cta{color:var(--gold);border-color:var(--gold)}
+.cs.terracotta .cs-cta,.cs.sage .cs-cta{color:#fff;border-color:rgba(255,255,255,0.5)}
+.cs-before-after{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:0.5rem}
+.ba-label{font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.7rem}
+.ba-before .ba-label{color:var(--muted)}
+.ba-after .ba-label{color:var(--terracotta)}
+.ba-text{font-size:0.85rem;line-height:1.75}
+.ba-before .ba-text{color:var(--muted);font-style:italic;text-decoration:line-through;text-decoration-color:rgba(0,0,0,0.2)}
+
+/* INSTAGRAM SECTION */
+.insta-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-bottom:4rem}
+.insta-desc{font-size:0.9rem;color:var(--muted);line-height:1.8}
+.insta-note{background:var(--warm);border-left:3px solid var(--terracotta);padding:1.2rem 1.5rem;border-radius:0 6px 6px 0;font-size:0.82rem;color:var(--muted);line-height:1.7;margin-top:1.5rem}
+
+/* INSTAGRAM MOCK POSTS - realistic phone-style */
+.posts-showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:680px){.posts-showcase{grid-template-columns:1fr 1fr}}
+
+.post-phone{border-radius:12px;overflow:hidden;border:1px solid var(--sand);background:#fff;transition:transform 0.25s,box-shadow 0.25s}
+.post-phone:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,0.1)}
+
+/* Post header (account row) */
+.ph-header{padding:10px 12px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #f5f5f5}
+.ph-avatar{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}
+.ph-name{font-size:11px;font-weight:700;color:#111}
+.ph-handle{font-size:10px;color:#aaa}
+.ph-dot{margin-left:auto;width:16px;text-align:center;color:#999;font-size:16px;line-height:1}
+
+/* Post image area */
+.ph-image{width:100%;aspect-ratio:1;position:relative;overflow:hidden;display:flex;flex-direction:column}
+
+/* Post footer */
+.ph-footer{padding:10px 12px}
+.ph-actions{display:flex;gap:12px;margin-bottom:7px}
+.ph-icon{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;color:#111}
+.ph-icon-save{margin-left:auto}
+.ph-likes{font-size:11px;font-weight:700;color:#111;margin-bottom:4px}
+.ph-caption-preview{font-size:10.5px;color:#333;line-height:1.5}
+.ph-caption-preview strong{font-weight:700}
+.ph-tags{font-size:10px;color:#aaa;margin-top:3px}
+
+/* POST 1: Skincare — editorial magazine layout */
+.p1-img{background:#F5EDE4;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:1.2rem;position:relative}
+.p1-circle{position:absolute;top:12px;right:12px;width:60px;height:60px;border-radius:50%;background:#C45C3A;display:flex;align-items:center;justify-content:center;text-align:center}
+.p1-circle span{font-size:7.5px;font-weight:800;color:#fff;letter-spacing:0.06em;text-transform:uppercase;line-height:1.3}
+.p1-tag{display:inline-block;background:#111;color:#fff;font-size:8px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:3px 8px;margin-bottom:8px}
+.p1-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;line-height:1.2;color:#111}
+.p1-divider{width:28px;height:2px;background:#C45C3A;margin:8px 0}
+.p1-sub{font-size:8.5px;color:#777;letter-spacing:0.1em;text-transform:uppercase}
+
+/* POST 2: Finance — bold brutalist numbers */
+.p2-img{background:#0E0E0E;flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:1.3rem}
+.p2-top{display:flex;justify-content:space-between;align-items:flex-start}
+.p2-pill{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);padding:4px 10px;border-radius:2px;font-size:8px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5)}
+.p2-arrow{color:#C8A96E;font-size:18px;font-weight:300}
+.p2-mid{text-align:left}
+.p2-big{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:#FAF8F3;line-height:0.95;letter-spacing:-0.03em}
+.p2-unit{font-size:11px;font-weight:600;color:#C8A96E;letter-spacing:0.1em;text-transform:uppercase;margin-top:6px}
+.p2-bottom{}
+.p2-caption{font-size:8.5px;color:rgba(255,255,255,0.45);line-height:1.6;max-width:160px}
+.p2-swipe{font-size:8px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#C8A96E;margin-top:6px}
+
+/* POST 3: Fitness — high energy contrast */
+.p3-img{background:var(--terracotta);flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:1.3rem;position:relative;overflow:hidden}
+.p3-bg-text{position:absolute;bottom:-10px;left:-5px;font-family:'Playfair Display',serif;font-size:5.5rem;font-weight:900;color:rgba(0,0,0,0.12);line-height:1;letter-spacing:-0.05em;pointer-events:none}
+.p3-top{position:relative;z-index:1}
+.p3-label{font-size:8px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:8px}
+.p3-headline{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#fff;line-height:1.15}
+.p3-bottom{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-end}
+.p3-stat{text-align:left}
+.p3-statnum{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:#fff;line-height:1}
+.p3-statlabel{font-size:7.5px;font-weight:600;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em}
+.p3-cta{background:#fff;color:var(--terracotta);font-size:8px;font-weight:800;padding:6px 12px;border-radius:2px;letter-spacing:0.1em;text-transform:uppercase}
+
+/* POST 4: Café — warm editorial */
+.p4-img{background:#3B2A1A;flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:1.3rem;position:relative}
+.p4-pattern{position:absolute;top:0;left:0;right:0;bottom:0;opacity:0.06;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:12px 12px}
+.p4-top{position:relative;z-index:1}
+.p4-new{display:inline-flex;align-items:center;gap:5px;background:var(--gold);padding:3px 9px;border-radius:2px;font-size:7.5px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#3B2A1A;margin-bottom:10px}
+.p4-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;color:#FAF8F3;line-height:1.2}
+.p4-bottom{position:relative;z-index:1}
+.p4-desc{font-size:8px;color:rgba(250,248,243,0.55);line-height:1.6;margin-bottom:8px}
+.p4-line{display:flex;justify-content:space-between;align-items:center}
+.p4-day{font-size:9px;font-weight:700;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase}
+.p4-arrow-btn{background:var(--gold);color:#3B2A1A;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900}
+
+/* POST 5: Skincare carousel */
+.p5-img{background:#FAF0EA;flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:1.3rem}
+.p5-top{}
+.p5-steps{display:flex;gap:4px;margin-bottom:10px}
+.p5-step{height:3px;flex:1;border-radius:2px;background:var(--sand)}
+.p5-step.active{background:var(--terracotta)}
+.p5-slide-label{font-size:8px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:8px}
+.p5-headline{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--ink);line-height:1.2}
+.p5-body{font-size:8px;color:var(--muted);line-height:1.7;margin-top:6px;max-width:160px}
+.p5-bottom{display:flex;justify-content:space-between;align-items:center}
+.p5-slide-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:rgba(0,0,0,0.08)}
+.p5-swipe{font-size:7.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--terracotta)}
+
+/* POST 6: Brand announcement */
+.p6-img{background:var(--sage);flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:1.3rem}
+.p6-top{}
+.p6-announce{font-size:8px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:10px}
+.p6-headline{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#fff;line-height:1.2}
+.p6-divider{width:24px;height:1.5px;background:rgba(255,255,255,0.4);margin:10px 0}
+.p6-quote{font-size:8.5px;color:rgba(255,255,255,0.7);line-height:1.7;font-style:italic}
+.p6-bottom{display:flex;align-items:center;justify-content:space-between}
+.p6-brand{font-size:8px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.9)}
+.p6-dot{width:6px;height:6px;border-radius:50%;background:#fff}
+
+/* CAPTIONS */
+.cap-section{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:680px){.cap-section{grid-template-columns:1fr}}
+.cap-card{border:1px solid var(--sand);border-radius:8px;overflow:hidden;background:#fff;transition:border-color 0.2s}
+.cap-card:hover{border-color:var(--terracotta)}
+.cap-card-head{padding:1rem 1.3rem;background:var(--warm);border-bottom:1px solid var(--sand);display:flex;align-items:center;gap:10px}
+.cap-avi{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+.cap-handle{font-weight:700;font-size:13px;color:var(--ink)}
+.cap-niche{font-size:11px;color:var(--muted)}
+.cap-body{padding:1.3rem}
+.cap-text{font-size:0.83rem;line-height:1.9;color:#333;white-space:pre-line}
+.cap-hash{margin-top:0.9rem;padding-top:0.9rem;border-top:1px solid var(--sand);font-size:0.73rem;color:var(--muted);line-height:2.1}
+.cap-strategy{margin-top:0.8rem;padding:0.7rem 0.9rem;background:var(--warm);border-radius:4px;font-size:0.75rem;color:var(--muted);font-style:italic}
+.cap-strategy::before{content:'💡 ';font-style:normal}
+
+/* SERVICES / PRICING */
+.price-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--sand);border:2px solid var(--sand);border-radius:8px;overflow:hidden}
+@media(max-width:680px){.price-row{grid-template-columns:1fr}}
+.pc{background:var(--paper);padding:2.5rem 2rem;position:relative}
+.pc.featured{background:var(--ink);color:var(--paper)}
+.pc-badge{position:absolute;top:1.5rem;right:1.5rem;background:var(--terracotta);color:#fff;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:2px}
+.pc-label{font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:0.8rem}
+.pc.featured .pc-label{color:var(--gold)}
+.pc-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:0.5rem;color:var(--ink)}
+.pc.featured .pc-name{color:var(--paper)}
+.pc-price{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;line-height:1;margin-bottom:0.4rem;letter-spacing:-0.02em;color:var(--ink)}
+.pc.featured .pc-price{color:var(--paper)}
+.pc-price sup{font-size:1.1rem;vertical-align:top;margin-top:0.6rem;display:inline-block}
+.pc-desc{font-size:0.78rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6}
+.pc.featured .pc-desc{color:rgba(255,255,255,0.5)}
+.pc-items{list-style:none;display:flex;flex-direction:column;gap:0}
+.pc-item{font-size:0.8rem;padding:8px 0;border-top:1px solid var(--sand);color:#555;display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+.pc.featured .pc-item{border-color:rgba(255,255,255,0.08);color:rgba(255,255,255,0.65)}
+.pc-check{color:var(--terracotta);font-weight:700;flex-shrink:0;margin-top:1px}
+.pc.featured .pc-check{color:var(--gold)}
+.price-footer{margin-top:3rem;text-align:center;font-size:0.82rem;color:var(--muted)}
+.price-footer a{color:var(--terracotta);text-decoration:none;font-weight:600}
+
+/* FOOTER */
+footer{background:var(--ink);color:var(--paper);padding:5rem 3rem 3rem}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:4rem;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,255,255,0.08)}
+@media(max-width:680px){.footer-grid{grid-template-columns:1fr;gap:2.5rem}}
+.ft-name{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;line-height:1;letter-spacing:-0.03em;margin-bottom:0.8rem}
+.ft-name i{font-style:italic;color:var(--terracotta)}
+.ft-tagline{font-size:0.85rem;color:rgba(255,255,255,0.4);line-height:1.7;max-width:260px}
+.ft-heading{font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:1.3rem}
+.ft-link{display:block;font-size:0.88rem;color:rgba(255,255,255,0.6);text-decoration:none;padding:6px 0;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.05)}
+.ft-link:last-child{border-bottom:none}
+.ft-link:hover{color:var(--paper)}
+.ft-contact-item{display:flex;flex-direction:column;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.ft-contact-item:last-child{border-bottom:none}
+.ft-ci-label{font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:3px}
+.ft-ci-val{font-size:0.85rem;color:rgba(255,255,255,0.65)}
+.ft-ci-val a{color:rgba(255,255,255,0.65);text-decoration:none}
+.ft-ci-val a:hover{color:var(--paper)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap}
+.ft-copy{font-size:11px;color:rgba(255,255,255,0.2)}
+.spec-disclaimer{font-size:0.75rem;color:rgba(255,255,255,0.18);line-height:1.7;max-width:580px}
+.spec-disclaimer strong{color:rgba(255,255,255,0.3)}
+
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--sand);border:2px solid var(--sand);border-radius:8px;overflow:hidden;margin-bottom:2rem}
+.proc-step{background:var(--paper);padding:2.5rem 2rem}
+.proc-num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:var(--sand);line-height:1;margin-bottom:1rem;letter-spacing:-0.04em}
+.proc-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:0.8rem;color:var(--ink)}
+.proc-desc{font-size:0.85rem;line-height:1.85;color:var(--muted)}
+.honest-note{background:var(--ink);border-radius:8px;padding:2.5rem 3rem;display:grid;grid-template-columns:160px 1fr;gap:2.5rem;align-items:start}
+.hn-label{font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--terracotta);padding-top:3px;line-height:1.6}
+.hn-text{font-size:0.9rem;line-height:1.85;color:rgba(255,255,255,0.6)}
+.hn-text strong{color:rgba(255,255,255,0.9);font-weight:600}
+.tools-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:1.2rem}
+.tool-tag{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border:1px solid rgba(255,255,255,0.12);border-radius:3px;color:rgba(255,255,255,0.4)}
+
+/* HAMBURGER */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:6px 4px;margin-left:auto}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all 0.25s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:680px){
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:6rem}
+  .hero-right{display:none}
+  .insta-intro{grid-template-columns:1fr}
+  .posts-showcase{grid-template-columns:1fr 1fr}
+  nav{padding:0 1.5rem}
+  .section{padding:4rem 1.5rem}
+  .footer-grid{padding:0}
+  .process-grid{grid-template-columns:1fr}
+  .honest-note{grid-template-columns:1fr;gap:1rem;padding:2rem}
+  .cs-before-after{grid-template-columns:1fr;gap:1.5rem}
+
+  /* NAV MOBILE DROPDOWN */
+  .nav-hamburger{display:flex}
+  .nav-links{
+    display:none;
+    position:fixed;
+    top:60px;left:0;right:0;
+    background:var(--paper);
+    flex-direction:column;
+    align-items:stretch;
+    padding:0.5rem 1.5rem 1.5rem;
+    gap:0;
+    border-bottom:2px solid var(--sand);
+    box-shadow:0 12px 32px rgba(0,0,0,0.07);
+    z-index:99;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{
+    font-size:14px;
+    padding:14px 0;
+    border-bottom:1px solid var(--sand);
+    letter-spacing:0.04em;
+    color:var(--ink);
+    text-transform:uppercase;
+  }
+  .nav-links a:last-child{border-bottom:none;margin-top:8px;padding:12px 0;text-align:center;border-radius:3px}
+  .nav-cta{margin-top:4px!important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Bhavya Bagaria</div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="#work" class="nav-close-on-click">Work</a>
+    <a href="#posts" class="nav-close-on-click">Instagram</a>
+    <a href="#process" class="nav-close-on-click">Process</a>
+    <a href="#pricing" class="nav-close-on-click">Pricing</a>
+    <a href="mailto:bhavyabagariadc@gmail.com" class="nav-cta">Hire me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-overline"><span>Copywriter & Content Creator</span></div>
+    <h1>I write the words<br>that make people<br><i>actually buy.</i></h1>
+    <p class="hero-desc">Sharp copy and scroll-stopping Instagram content for D2C brands, creators, and local businesses. Posts delivered as Canva files — you keep full edit access. Student rates, no agency overhead.</p>
+    <div class="hero-btns">
+      <a href="mailto:bhavyabagariadc@gmail.com" class="btn btn-primary">Work with me →</a>
+      <a href="#work" class="btn btn-outline">See samples</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card-stack">
+      <div class="hc hc1">
+        <div class="hc-num">01</div>
+        <div class="hc-label">Ad copy · fashion</div>
+        <div class="hc-text">"You've been dressing for other people. Stop."</div>
+      </div>
+      <div class="hc hc2">
+        <div class="hc-num" style="color:rgba(0,0,0,0.06)">02</div>
+        <div class="hc-label">tagline · wellness</div>
+        <div class="hc-text" style="font-size:0.9rem">"10 minutes a day. Actual results. No crystals required."</div>
+      </div>
+      <div class="hc hc3">
+        <div class="hc-label">caption · fitness</div>
+        <div class="hc-text" style="font-size:0.88rem">"Nobody talks about the Tuesday after Motivation Monday."</div>
+      </div>
+      <div class="hc hc4">
+        <div class="hc-text" style="font-size:0.76rem;line-height:1.4">Student rates.<br>Real instincts.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COPY SAMPLES -->
+<section class="section" id="work">
+  <div class="sec-header">
+    <div class="sec-overline"><span>Copywriting</span></div>
+    <div class="sec-title">Words that do <i>actual work.</i></div>
+    <p class="sec-sub">Every piece below is spec work — written to a real brief, as if the brand were a real client. This is exactly how I'd approach your project.</p>
+  </div>
+
+  <div class="copy-grid">
+
+    <div class="cs dark">
+      <div class="cs-meta">
+        <span class="cs-type">Ad Copy</span>
+        <span class="cs-industry">Fashion D2C</span>
+      </div>
+      <div class="cs-headline">"You've been dressing for other people. Stop."</div>
+      <div class="cs-body">Clothes that fit how you actually live — not how the algorithm says you should. Sizes 2XS to 4XL. No fine print, no asterisks, no compromises.</div>
+      <a class="cs-cta">Instagram ad · carousel hook</a>
+    </div>
+
+      <div class="cs terracotta">
+      <div class="cs-meta">
+        <span class="cs-type">Email Subject Lines</span>
+        <span class="cs-industry" style="color:rgba(255,255,255,0.5)">EdTech</span>
+      </div>
+      <div class="cs-headline">"I cracked it in 3 weeks. Here's the one thing I did differently."</div>
+      <div class="cs-body">Wrote five variants for this brief. This is the one I kept coming back to — it's specific, and it makes you feel just a little bit called out. That's usually when people actually click.</div>
+      <a class="cs-cta">Email subject line · spec concept</a>
+    </div>
+
+    <div class="cs">
+      <div class="cs-meta">
+        <span class="cs-type">Tagline</span>
+        <span class="cs-industry">Wellness App</span>
+      </div>
+      <div class="cs-headline">"10 minutes a day. Actual results. No crystals required."</div>
+      <div class="cs-body">Brief was basically: make this feel human, not hippie. I wrote three directions. This one's my favourite — it doesn't try to convince you, it just pokes a hole in the excuse.</div>
+      <a class="cs-cta">Brand tagline · final concept</a>
+    </div>
+
+    <div class="cs sage">
+      <div class="cs-meta">
+        <span class="cs-type">Product Description</span>
+        <span class="cs-industry" style="color:rgba(255,255,255,0.5)">F&B</span>
+      </div>
+      <div class="cs-headline">"Not your morning coffee. Your 11pm deadline fuel."</div>
+      <div class="cs-body">Single-origin cold brew. 18-hour steep. Notes of dark chocolate, zero apologies. For people who sleep when the work is actually done — not when the clock says to.</div>
+      <a class="cs-cta">Product page · D2C brand</a>
+    </div>
+
+    <div class="cs full">
+      <div class="cs-meta">
+        <span class="cs-type">Bio Rewrite</span>
+        <span class="cs-industry">Personal Brand · Fitness Coach</span>
+      </div>
+      <div class="cs-before-after">
+        <div class="ba-before">
+          <div class="ba-label">Before</div>
+          <div class="ba-text">"Certified PT 💪 | Helping you reach your goals | DM for custom plans | Kolkata 🇮🇳 | Fitness is a lifestyle"</div>
+        </div>
+        <div class="ba-after">
+          <div class="ba-label">After — what I wrote</div>
+          <div class="ba-text">"Turned 300+ desk jobs into athlete bodies. 90-day home program. No gym, no excuses, no fluff. Results or your money back. ↓ Start here."<br><br><small style="color:var(--muted);font-size:0.78rem">The before says nothing. The after makes a promise, backs it up with proof, and tells people exactly what to do next.</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs">
+      <div class="cs-meta">
+        <span class="cs-type">Website Hero</span>
+        <span class="cs-industry">SaaS · Project Management</span>
+      </div>
+      <div class="cs-headline">"Your team is working hard. But is it working together?"</div>
+      <div class="cs-body">Homepage headline for a B2B project tool. Subhead I paired it with: "Stop managing the chaos. Start making progress." I always write the problem before the pitch — if someone doesn't feel seen in the first line, they're not reading the second.</div>
+    </div>
+
+    <div class="cs">
+      <div class="cs-meta">
+        <span class="cs-type">Push Notifications</span>
+        <span class="cs-industry">Food Delivery</span>
+      </div>
+      <div class="cs-headline">"Your stomach just asked about you."</div>
+      <div class="cs-body">Four lunch-hour notification variants. This is the one I liked most — weird enough to make you pause, short enough that it doesn't matter if you ignore it. Both outcomes work.</div>
+      <a class="cs-cta">Series of 4 variants</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- INSTAGRAM POSTS -->
+<section class="section section-alt" id="posts">
+  <div class="sec-header">
+    <div class="sec-overline"><span>Instagram Content</span></div>
+    <div class="sec-title">Designed to <i>stop the scroll.</i></div>
+    <p class="sec-sub">Concept posts — each one has a visual direction, a caption strategy, and a reason to exist beyond being a coloured square with text on it.</p>
+  </div>
+
+  <div class="posts-showcase">
+
+    <!-- POST 1: Skincare editorial -->
+    <div class="post-phone">
+      <div class="ph-header">
+        <div class="ph-avatar" style="background:#F5EDE4;color:#C45C3A">GS</div>
+        <div>
+          <div class="ph-name">glowshastra</div>
+          <div class="ph-handle">skincare education</div>
+        </div>
+        <div class="ph-dot">···</div>
+      </div>
+      <div class="ph-image">
+        <div class="p1-img">
+          <div class="p1-circle"><span>SLIDE<br>01 / 06</span></div>
+          <div class="p1-tag">Skincare Myth</div>
+          <div class="p1-title">Your skin isn't the problem. Your routine is.</div>
+          <div class="p1-divider"></div>
+          <div class="p1-sub">3 ingredients. that's all you need</div>
+        </div>
+      </div>
+      <div class="ph-footer">
+        <div class="ph-actions">
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <svg class="ph-icon ph-icon-save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="ph-tags">#skincaretips #clearskin #indianskincare</div>
+      </div>
+    </div>
+
+    <!-- POST 2: Finance bold -->
+    <div class="post-phone">
+      <div class="ph-header">
+        <div class="ph-avatar" style="background:#0E0E0E;color:#C8A96E">PF</div>
+        <div>
+          <div class="ph-name">paisa.flow</div>
+          <div class="ph-handle">personal finance india</div>
+        </div>
+        <div class="ph-dot">···</div>
+      </div>
+      <div class="ph-image">
+        <div class="p2-img">
+          <div class="p2-top">
+            <div class="p2-pill">Finance Tip</div>
+            <div class="p2-arrow">↗</div>
+          </div>
+          <div class="p2-mid">
+            <div class="p2-big">₹0</div>
+            <div class="p2-big" style="font-size:1.4rem;color:rgba(250,248,243,0.4);margin-top:4px">invested in your 20s</div>
+            <div class="p2-unit">The most expensive mistake you'll make</div>
+          </div>
+          <div class="p2-bottom">
+            <div class="p2-caption">Compound interest doesn't care about your excuses. Swipe to see the actual numbers.</div>
+            <div class="p2-swipe">Swipe → 1 of 5</div>
+          </div>
+        </div>
+      </div>
+      <div class="ph-footer">
+        <div class="ph-actions">
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <svg class="ph-icon ph-icon-save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="ph-tags">#personalfinance #investing #moneymindset</div>
+      </div>
+    </div>
+
+    <!-- POST 3: Fitness -->
+    <div class="post-phone">
+      <div class="ph-header">
+        <div class="ph-avatar" style="background:var(--terracotta);color:#fff">KF</div>
+        <div>
+          <div class="ph-name">keertifitlife</div>
+          <div class="ph-handle">fitness coach</div>
+        </div>
+        <div class="ph-dot">···</div>
+      </div>
+      <div class="ph-image">
+        <div class="p3-img">
+          <div class="p3-bg-text">GO</div>
+          <div class="p3-top">
+            <div class="p3-label">90-day program</div>
+            <div class="p3-headline">You don't need motivation. You need a system that works while motivation doesn't.</div>
+          </div>
+          <div class="p3-bottom">
+            <div class="p3-stat">
+              <div class="p3-statnum">847</div>
+              <div class="p3-statlabel">transformations</div>
+            </div>
+            <div class="p3-cta">Free plan ↓</div>
+          </div>
+        </div>
+      </div>
+      <div class="ph-footer">
+        <div class="ph-actions">
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <svg class="ph-icon ph-icon-save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="ph-tags">#fitnesscoach #homeworkout #mindset</div>
+      </div>
+    </div>
+
+    <!-- POST 4: Café -->
+    <div class="post-phone">
+      <div class="ph-header">
+        <div class="ph-avatar" style="background:#3B2A1A;color:#C8A96E">BC</div>
+        <div>
+          <div class="ph-name">beansbycuppa</div>
+          <div class="ph-handle">café · bangalore</div>
+        </div>
+        <div class="ph-dot">···</div>
+      </div>
+      <div class="ph-image">
+        <div class="p4-img">
+          <div class="p4-pattern"></div>
+          <div class="p4-top">
+            <div class="p4-new">✦ New menu</div>
+            <div class="p4-title">The weekend brunch you actually asked for.</div>
+          </div>
+          <div class="p4-bottom">
+            <div class="p4-desc">You said more butter. More time. More of that hazelnut thing. We listened.</div>
+            <div class="p4-line">
+              <div class="p4-day">Saturday, 9am →</div>
+              <div class="p4-arrow-btn">→</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ph-footer">
+        <div class="ph-actions">
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <svg class="ph-icon ph-icon-save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="ph-tags">#cafebangalore #sundaybrunch #newmenu</div>
+      </div>
+    </div>
+
+    <!-- POST 5: Carousel skincare -->
+    <div class="post-phone">
+      <div class="ph-header">
+        <div class="ph-avatar" style="background:#FAF0EA;color:var(--terracotta)">SV</div>
+        <div>
+          <div class="ph-name">suvastitch</div>
+          <div class="ph-handle">sustainable fashion</div>
+        </div>
+        <div class="ph-dot">···</div>
+      </div>
+      <div class="ph-image">
+        <div class="p5-img">
+          <div class="p5-top">
+            <div class="p5-steps">
+              <div class="p5-step active"></div>
+              <div class="p5-step"></div>
+              <div class="p5-step"></div>
+              <div class="p5-step"></div>
+              <div class="p5-step"></div>
+            </div>
+            <div class="p5-slide-label">The story behind it</div>
+            <div class="p5-headline">The fabric took 3 years to get right. Not because we failed.</div>
+            <div class="p5-body">Because we kept asking: can we make this better? Introducing the Everyday Linen — soft on day 1, even softer on day 300.</div>
+          </div>
+          <div class="p5-bottom">
+            <div class="p5-slide-num">01</div>
+            <div class="p5-swipe">Swipe for the story →</div>
+          </div>
+        </div>
+      </div>
+      <div class="ph-footer">
+        <div class="ph-actions">
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <svg class="ph-icon ph-icon-save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="ph-tags">#sustainablefashion #slowfashion #linenclothing</div>
+      </div>
+    </div>
+
+    <!-- POST 6: Brand announcement -->
+    <div class="post-phone">
+      <div class="ph-header">
+        <div class="ph-avatar" style="background:var(--sage);color:#fff">MW</div>
+        <div>
+          <div class="ph-name">mindworkapp</div>
+          <div class="ph-handle">wellness · meditation</div>
+        </div>
+        <div class="ph-dot">···</div>
+      </div>
+      <div class="ph-image">
+        <div class="p6-img">
+          <div class="p6-top">
+            <div class="p6-announce">New feature drop</div>
+            <div class="p6-headline">10 minutes a day. Actual results. No crystals required.</div>
+            <div class="p6-divider"></div>
+            <div class="p6-quote">"I've tried every meditation app. This one is the first that doesn't make me feel like I'm failing at relaxing."</div>
+          </div>
+          <div class="p6-bottom">
+            <div class="p6-brand">Mindwork · v2.0</div>
+            <div class="p6-dot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ph-footer">
+        <div class="ph-actions">
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <svg class="ph-icon" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <svg class="ph-icon ph-icon-save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="ph-tags">#mentalhealth #meditation #wellnessapp</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CAPTIONS -->
+<section class="section">
+  <div class="sec-header">
+    <div class="sec-overline"><span>Caption Writing</span></div>
+    <div class="sec-title">Copy that reads like a <i>human wrote it.</i></div>
+    <p class="sec-sub">Because audiences can smell a robot from a mile away. Every caption below has a hook, a body, and a reason to engage.</p>
+  </div>
+
+  <div class="cap-section">
+
+    <div class="cap-card">
+      <div class="cap-card-head">
+        <div class="cap-avi" style="background:#FAF0EA;color:var(--terracotta)">SV</div>
+        <div>
+          <div class="cap-handle">@suvastitch</div>
+          <div class="cap-niche">Sustainable fashion · Product launch</div>
+        </div>
+      </div>
+      <div class="cap-body">
+        <div class="cap-text">The fabric took us 3 years to get right.
+
+Not because we kept failing — but because we kept asking: can this be better?
+
+Introducing the Everyday Linen Set. Soft on day 1. Even softer on day 300.
+
+Pre-order opens Thursday, 7pm IST. Set your reminder. ⏰</div>
+        <div class="cap-hash">#sustainablefashion #slowfashion #linenclothing #consciousfashion #newdrop #sustainableliving</div>
+        <div class="cap-strategy">Leads with the effort, not the product. By the time you get to "Introducing...", you already care about it.</div>
+      </div>
+    </div>
+
+    <div class="cap-card">
+      <div class="cap-card-head">
+        <div class="cap-avi" style="background:var(--terracotta);color:#fff">KF</div>
+        <div>
+          <div class="cap-handle">@keertifitlife</div>
+          <div class="cap-niche">Fitness coach · Motivational post</div>
+        </div>
+      </div>
+      <div class="cap-body">
+        <div class="cap-text">Nobody talks about the Tuesday after Motivation Monday.
+
+When the alarm goes off at 6am. Nobody's watching. No dopamine hit waiting for you.
+
+That's the workout that actually changes you.
+
+Show up anyway. 💪</div>
+        <div class="cap-hash">#fitnesscoach #consistencyiskey #gymlife #mindset #workoutmotivation #nodaysoff</div>
+        <div class="cap-strategy">Leads with a feeling nobody names out loud. Once someone feels understood, they save it — that's the goal.</div>
+      </div>
+    </div>
+
+    <div class="cap-card">
+      <div class="cap-card-head">
+        <div class="cap-avi" style="background:#3B2A1A;color:var(--gold)">BC</div>
+        <div>
+          <div class="cap-handle">@beansbycuppa</div>
+          <div class="cap-niche">Café · Weekend promo</div>
+        </div>
+      </div>
+      <div class="cap-body">
+        <div class="cap-text">We asked 400 of you what you wanted on the weekend menu.
+
+You said: more butter. More time. More of that hazelnut thing.
+
+Done.
+
+New weekend brunch drops Saturday. ☕🥐
+
+Tag whoever you're dragging here first.</div>
+        <div class="cap-hash">#cafevibes #sundaybrunch #coffeeshop #bangalorefoodies #weekendspecial #brunchtime</div>
+        <div class="cap-strategy">Opens with "we asked you" — that line alone makes people feel part of it. The tag CTA at the end keeps it spreading without feeling forced.</div>
+      </div>
+    </div>
+
+    <div class="cap-card">
+      <div class="cap-card-head">
+        <div class="cap-avi" style="background:#FAF0EA;color:var(--terracotta)">GS</div>
+        <div>
+          <div class="cap-handle">@glowshastra</div>
+          <div class="cap-niche">Skincare · Educational carousel</div>
+        </div>
+      </div>
+      <div class="cap-body">
+        <div class="cap-text">Hot take: your moisturiser isn't the problem.
+
+It's the 4 things you're applying before it that are cancelling each other out.
+
+Swipe to see the exact order your skincare should go in — and why most people have it completely backwards. 👇</div>
+        <div class="cap-hash">#skincaretips #clearskin #indianskincare #glowup #skincareorder #skincarecommunity</div>
+        <div class="cap-strategy">"Hot take" does two things: signals there's an opinion coming, and makes you want to see if you agree. The swipe is earned, not begged for.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<section class="section" id="process">
+  <div class="sec-header">
+    <div class="sec-overline"><span>Process</span></div>
+    <div class="sec-title">Three steps. <i>Zero confusion.</i></div>
+    <p class="sec-sub">Quick brief, fast turnaround, a file you can actually use. That's the whole thing.</p>
+  </div>
+
+  <div class="process-grid">
+    <div class="proc-step">
+      <div class="proc-num">01</div>
+      <div class="proc-title">Brief</div>
+      <div class="proc-desc">WhatsApp me or email with your brand name, what you sell, who you're talking to, and what you need. 15 minutes of context is all I need to start.</div>
+    </div>
+    <div class="proc-step">
+      <div class="proc-num">02</div>
+      <div class="proc-title">Draft</div>
+      <div class="proc-desc">First draft in 48 hours. Posts arrive as editable Canva files — you keep full access forever. Captions in a Google Doc, ready to copy-paste straight to Instagram.</div>
+    </div>
+    <div class="proc-step">
+      <div class="proc-num">03</div>
+      <div class="proc-title">Revise</div>
+      <div class="proc-desc">Revisions included in every package. Tell me what to tweak; I turn it around the same day. No back-and-forth hell, no extra charges for minor changes.</div>
+    </div>
+  </div>
+
+  <div class="honest-note">
+    <div class="hn-label">The honest version</div>
+    <div class="hn-text">I'm a college student <strong>building my first client list</strong> — which means lower rates and no agency overhead, but also means your project gets my full attention, not a junior I've delegated it to. Every piece in this portfolio is spec work written to real briefs. If you're a small brand, a creator, or a local business that can't justify ₹20K/month agency retainers, that's exactly who I built this for.
+      <div class="tools-row">
+        <span class="tool-tag">Canva</span>
+        <span class="tool-tag">Google Docs</span>
+        <span class="tool-tag">WhatsApp delivery</span>
+        <span class="tool-tag">Available on Fiverr</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section section-alt" id="pricing">
+  <div class="sec-header">
+    <div class="sec-overline"><span>Pricing</span></div>
+    <div class="sec-title">Simple. <i>No surprises.</i></div>
+    <p class="sec-sub">Student rates. Real work. All projects include a proper brief, revisions, and files you actually own.</p>
+  </div>
+
+  <div class="price-row">
+    <div class="pc">
+      <div class="pc-label">Single pieces</div>
+      <div class="pc-name">À la carte</div>
+      <div class="pc-price"><sup>₹</sup>200<span style="font-size:1.2rem;opacity:0.4">–500</span></div>
+      <div class="pc-desc">Per piece. Best for one-off needs or trying me out on a single project.</div>
+      <ul class="pc-items">
+        <li class="pc-item"><span class="pc-check">✓</span>1 Instagram caption + hashtags</li>
+        <li class="pc-item"><span class="pc-check">✓</span>1 ad copy variant</li>
+        <li class="pc-item"><span class="pc-check">✓</span>1 bio rewrite</li>
+        <li class="pc-item"><span class="pc-check">✓</span>1 revision included</li>
+        <li class="pc-item"><span class="pc-check">✓</span>Delivered in 24 hours</li>
+      </ul>
+    </div>
+
+    <div class="pc featured">
+      <div class="pc-badge">Most popular</div>
+      <div class="pc-label">Weekly retainer</div>
+      <div class="pc-name">Content Bundle</div>
+      <div class="pc-price"><sup>₹</sup>1,500</div>
+      <div class="pc-desc">Per week. Consistent content without you having to think about it.</div>
+      <ul class="pc-items">
+        <li class="pc-item"><span class="pc-check">✓</span>4 posts (design + caption)</li>
+        <li class="pc-item"><span class="pc-check">✓</span>Hashtag research per post</li>
+        <li class="pc-item"><span class="pc-check">✓</span>2 revisions per post</li>
+        <li class="pc-item"><span class="pc-check">✓</span>Delivered in 3 days</li>
+        <li class="pc-item"><span class="pc-check">✓</span>WhatsApp communication</li>
+      </ul>
+    </div>
+
+    <div class="pc">
+      <div class="pc-label">Monthly retainer</div>
+      <div class="pc-name">Full Management</div>
+      <div class="pc-price"><sup>₹</sup>4,000</div>
+      <div class="pc-desc">Per month. Full content calendar, all copy handled, nothing for you to worry about.</div>
+      <ul class="pc-items">
+        <li class="pc-item"><span class="pc-check">✓</span>16–20 posts/month</li>
+        <li class="pc-item"><span class="pc-check">✓</span>All captions + hashtags</li>
+        <li class="pc-item"><span class="pc-check">✓</span>1 ad copy set included</li>
+        <li class="pc-item"><span class="pc-check">✓</span>Content calendar planning</li>
+        <li class="pc-item"><span class="pc-check">✓</span>Unlimited revisions</li>
+        <li class="pc-item"><span class="pc-check">✓</span>Priority turnaround</li>
+      </ul>
+    </div>
+  </div>
+  <p class="price-footer">Need something custom? <a href="mailto:bhavyabagariadc@gmail.com">Email me</a> and we'll figure it out.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="ft-name">Let's make<br>something <i>great.</i></div>
+      <div class="ft-tagline">Currently taking on first clients. Student rates, real work, fast turnaround. I reply within 24 hours, always.</div>
+    </div>
+    <div>
+      <div class="ft-heading">Navigate</div>
+      <a href="#work" class="ft-link">Copywriting samples</a>
+      <a href="#posts" class="ft-link">Instagram content</a>
+      <a href="#process" class="ft-link">How I work</a>
+      <a href="#pricing" class="ft-link">Pricing</a>
+      <a href="mailto:bhavyabagariadc@gmail.com" class="ft-link">Hire me →</a>
+    </div>
+    <div>
+      <div class="ft-heading">Contact</div>
+      <div class="ft-contact-item">
+        <div class="ft-ci-label">Email</div>
+        <div class="ft-ci-val"><a href="mailto:bhavyabagariadc@gmail.com">bhavyabagariadc@gmail.com</a></div>
+      </div>
+      <div class="ft-contact-item">
+        <div class="ft-ci-label">Phone / WhatsApp</div>
+        <div class="ft-ci-val"><a href="tel:+917637082719">+91 76370 82719</a></div>
+      </div>
+      <div class="ft-contact-item">
+        <div class="ft-ci-label">Platforms</div>
+        <div class="ft-ci-val">Fiverr</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="ft-copy">© 2025 Bhavya Bagaria</div>
+    <div class="spec-disclaimer">All portfolio samples are <strong>spec work</strong> — written and designed to real briefs to demonstrate style and thinking. Brand names and handles shown are fictional. All copy and visual concepts are original work.</div>
+  </div>
+</footer>
+
+<script>
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('navLinks');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+document.querySelectorAll('.nav-close-on-click').forEach(a => {
+  a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    nav.classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
